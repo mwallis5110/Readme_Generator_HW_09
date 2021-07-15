@@ -19,15 +19,40 @@ function renderLicenseSection(license) {
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${responses.title}
+function generateMarkdown(response) {
+  return `# ${response.title}
   ##Description 
-  ${responses.description}
+  ${response.description}
+  
+  ##Table of Contents
+  ${response.contents}
 
-  ##
-  ${renderLicenseBadge(response.license)}
+  ##Installation Instructions
+  ${response.installation}
 
-`;
+  ##Using the Program
+  ${response.usage}
+`
 }
 
+// .then((response) => {
+//     title, description, contents, installation, usage, license, contributing, tests, questions
+//   }) => { --Which page does this go on?
+
 module.exports = generateMarkdown;
+
+
+
+
+  // ##License
+  // ${renderLicenseBadge(response.license)}
+
+  // ##How to contribute
+  // ${contributing}
+
+  // ##Tests
+  // ${tests}
+
+  // ##Questions
+  // ${questions}
+  
