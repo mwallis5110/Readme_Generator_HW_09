@@ -32,6 +32,9 @@ function generateMarkdown(response) {
 
   ##Using the Program
   ${response.usage}
+
+  ####This Readme was generated using a Node.js Readme generator. 
+  [Get that open-source generator here.](git@github.com:mwallis5110/Readme_Generator_HW_09.git)
 `
 }
 
