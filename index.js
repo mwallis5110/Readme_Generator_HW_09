@@ -1,7 +1,9 @@
+//Uses inqirier npm package, generateMarkdown.js, and fs to write files
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 const fs = require('fs');
 
+//Takes input from users
 const questions = [
     {
         type: 'input',
@@ -12,11 +14,6 @@ const questions = [
         type: 'input',
         message: 'Description: ',
         name: 'description',
-    },
-    {
-        type: 'input',
-        message: 'Table of Contents: ',
-        name: 'contents',
     },
     {
         type: 'input',
@@ -49,9 +46,22 @@ const questions = [
         message: 'Questions: ',
         name: 'questions',
     },
+    {
+        type: 'input',
+        message: 'Github Link: ',
+        name: 'github',
+    },
+    {
+        type: 'input',
+        message: 'Email Address: ',
+        name: 'email',
+    },
 ];
 
+//Inquirer passes each message through the terminal as a question to be answered
 inquirer.prompt(questions)
+    //When each question is answered, the program passes the responses to be written 
+    //in a markdown document. Console will log the success or failure of this
     .then((responses) => {
         fs.writeFile("README.md", generateMarkdown(responses), (err) => {
         err ? console.log(err) : console.log('Success!')
@@ -59,7 +69,6 @@ inquirer.prompt(questions)
     });
 
 
-// TODO: Create a function to initialize app
 function init() {};
 
 // Function call to initialize app

@@ -1,29 +1,45 @@
-# a
 
-  ##Description 
-  a
+# Title 
+ReadMe Generator
 
-  ##Table of Contents
-  a
+## Description 
+This is a program used to create ReadMe documents via the command line.
 
-  ##Installation Instructions
-  a
+## Table of Contents
+#### [Installation Instructions](#installation-instructions)<br>
+#### [Using The Program](#using-the-program)<br>
+#### [License](#license)<br>
+#### [How to Contribute](#how-to-contribute)<br>
+#### [Tests](#tests)<br>
+#### [Questions](#questions)<br>
+#### [Github Link](#github-link)<br>
+#### [Email](#email)<br>
 
-  ##Using the Program
-  a
+## Installation Instructions
+In order to initialize the program, users should open it in an integrated terminal and type "node index.js". The prompts for the ReadMe document will then appear in sequential order to be filled out by the user. Please note, the program requires Node.js and inquirer.js to run.
 
-  ##License
-  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+## Using the Program
+After initializing the program, users will be prompted to input their content with the command line. Pressing enter will cause the program to move to the next prompt. When all prompts are completed, the finished ReadMe should appear in the main project directory.
 
-  ##How to contribute
-  a
+## License
+#### [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-  ##Tests
-  a
+## How to Contribute
+Create a separate branch, make your changes, and then open a pull request.
 
-  ##Questions
-  a
+## Tests
+No tests have been written for this program.
+
+## Questions
+Contact me via email at mwallis5110@gmail.com
+
+## Github Link
+
+
+## Email
+mwallis5110@gmail.com
   
 
-  ####This Readme was generated using a Node.js Readme generator. 
-  [Get that open-source generator here.](git@github.com:mwallis5110/Readme_Generator_HW_09.git)
+
+#### This Readme was generated using a Node.js Readme generator. 
+[Get that open-source generator here.](git@github.com:mwallis5110/Readme_Generator_HW_09.git)

@@ -1,6 +1,5 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-
+//Uses switch cases to choose a license based on user response to the "license" prompt within 
+//the questions array in index.js.  
 function renderLicense(license) {
   switch (license) {
     case "MIT":
@@ -21,52 +20,59 @@ function renderLicense(license) {
   };
   return license;
 };
-
+//Generates the actual contents of the markdown document by pulling in responses from index.js
 function generateMarkdown(responses) {
 
-  //switch statement for each license type response.license
-  //inside the case set the license var to the appropriate string
   license = '';
   renderLicense(responses)
 
-  return `# ${responses.title}
+  return `
+# Title 
+${responses.title}
 
-  ##Description 
-  ${responses.description}
+## Description 
+${responses.description}
 
-  ##Table of Contents
-  ${responses.contents}
-  [Installation](#installation)<br>
-  [Usage](#usage)<br>
-  [License](#license)<br>
-  [Contributing](#contributing)<br>
-  [Tests](#tests)<br>
-  [Questions](#questions)<br>
+## Table of Contents
+#### [Installation Instructions](#installation-instructions)<br>
+#### [Using The Program](#using-the-program)<br>
+#### [License](#license)<br>
+#### [How to Contribute](#how-to-contribute)<br>
+#### [Tests](#tests)<br>
+#### [Questions](#questions)<br>
+#### [Github Link](#github-link)<br>
+#### [Email](#email)<br>
 
-  ##Installation Instructions
-  ${responses.installation}
+## Installation Instructions
+${responses.installation}
 
-  ##Using the Program
-  ${responses.usage}
+## Using the Program
+${responses.usage}
 
-  ##License
-  ${renderLicense(responses.license)}
+## License
+#### ${renderLicense(responses.license)}
 
-  ##How to contribute
-  ${responses.contributing}
+## How to Contribute
+${responses.contributing}
 
-  ##Tests
-  ${responses.tests}
+## Tests
+${responses.tests}
 
-  ##Questions
-  ${responses.questions}
+## Questions
+${responses.questions}
+
+## Github Link
+${responses.github}
+
+## Email
+${responses.email}
   
 
-  ####This Readme was generated using a Node.js Readme generator. 
-  [Get that open-source generator here.](git@github.com:mwallis5110/Readme_Generator_HW_09.git)
+#### This Readme was generated using a Node.js Readme generator. 
+[Get that open-source generator here.](git@github.com:mwallis5110/Readme_Generator_HW_09.git)
 `
 };
 
 
-
+//Exports content back to index.js
 module.exports = generateMarkdown;
